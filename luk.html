@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='luk.css'>
+        <script src='luk.js'></script>
+        <style>
+            body {
+                margin: 10px;
+            }
+            #knob {
+                width: 40px;
+                height: 40px;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                new luk.Knob(
+                    document.getElementById('knob'),
+                    {'onchange':
+                        function (value) {
+                            document.getElementById('display').innerHTML = value;
+                        }
+                    }
+                );
+            };
+        </script>
+    </head>
+    <body>
+        <div id='knob'></div>
+        <div id='display'>0</div>
+    </body>
+</html>
